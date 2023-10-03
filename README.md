@@ -189,6 +189,11 @@ Get IP:
   Test:
     $browser_get_ip(function(ip){alert('Your IP: '+ip)} )
 
+Info_from_ip:
+  $get_location_from_ip
+  Test:
+    $get_location_from_ip('8.8.8.8',function(info){alert(info)}
+
 Get battery:
   $browser_platform()
 
