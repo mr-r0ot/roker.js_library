@@ -4,7 +4,7 @@ Hello! We're here to make coding easier! We are here for a brighter future! Encr
 
 # Import To Html Project (Replace the version you want to use with 3.3.3!)
 ```
-<script src="https://raw.githubusercontent.com/mr-r0ot/roker.js_library/main/roker3.3.3/roker.js"></script>
+<script src="https://mr-r0ot.github.io/roker.js_library/roker3.3.3/roker.js"></script>
 ```
 
 
@@ -35,8 +35,8 @@ base32:
 
 
 base64++:
-  $encode_base58('text', key=5)  //Encodeing With BASE64 (Your Can Encodeing Text With A KEY And Decodeing With It KEY)
-  $decode_base58('text encoded', key=5)  //Decodeing With BASE64 (Your Can Encodeing Text With A KEY And Decodeing With It KEY)
+  $encode_base64('text', key=5)  //Encodeing With BASE64 (Your Can Encodeing Text With A KEY And Decodeing With It KEY)
+  $decode_base64('text encoded', key=5)  //Decodeing With BASE64 (Your Can Encodeing Text With A KEY And Decodeing With It KEY)
   $crack_key_base64('text encoded')  //Cracking And Hacking Key A Encode Text !
   $compile_base64('js code encode with base64', key=5)  //Compile Encoded JS Code
 
@@ -260,14 +260,6 @@ $get_src_by_id(id)
 $get_src_by_tag(tag)
 $get_src_by_class(class_name)
 
-$get_hidden_by_id(id)
-$get_hidden_by_tag(tag)
-$get_hidden_by_class(class_name)
-
-$get_show_by_id(id)
-$get_show_by_tag(tag)
-$get_show_by_class(class_name)
-
 
 $get_baseURI()
 $get_cookie()
@@ -298,6 +290,14 @@ $get_scripts()
 $set_text_by_id(id, text)
 $set_text_by_tag(tag, text)
 $set_text_by_class(class_name, text)
+
+$set_hidden_by_id(id)
+$set_hidden_by_tag(tag)
+$set_hidden_by_class(class_name)
+
+$set_show_by_id(id)
+$set_show_by_tag(tag)
+$set_show_by_class(class_name)
 
 
 SITE:
