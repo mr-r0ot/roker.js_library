@@ -8,6 +8,148 @@ Hello! We're here to make coding easier! We are here for a brighter future! Encr
 ```
 
 
+# Running Python Code On Your JS Codes
+```
+//For Installing Python Compiler
+$install_python();
+
+
+//For Running Python Code
+$run_python('YOUR_PYTHON_CODE')
+
+// ||
+// ||
+// \/
+
+$run_python('print("hello world!")')
+//Or
+$run_python('exec(input("Enter Python Code: ))')
+```
+
+
+
+
+
+
+
+# Importing Script Or Css With Roker
+```
+$import_script('PATH_OR_URL_YOUR_SCRIPT');
+$import_style('PATH_OR_URL_YOUR_STYLE');
+```
+
+
+
+
+
+
+# Security
+```
+ANTI functions:
+  Anti Robots:
+    //roker uses various methods such as captcha, browser check, connection and IP check, platform, etc. to identify and block them.
+    $is_robot();
+
+  Anti Click From Site:
+    //It prevents the user from right clicking on the site.
+    $anti_click();
+
+  Anti Injection Code:
+    $anti_injection('INPUTING_USER');
+
+  Anti Copy From Site:
+    $anti_copy(text='is a text for copying after copying a text');
+    $anti_copy(code='Your Codes');
+
+  Anti Connect By HTTP:
+    $anti_http('YOUR_JS_CODE');
+    $anti_http('$go_url("403.html")');
+
+  Anti Running On User System(LocalHost):
+    $anti_run_on_system('YOUR_JS_CODE');
+    $anti_run_on_system('$go_url("403.html")');
+
+
+
+
+
+ONLY functions:
+  Only WEb:
+    //Only those who visit the website through a safe browser are allowed to enter.
+    $only_web('YOUR_JS_CODE');
+    $only_web('$go_url("403.html")');
+
+  Only HTTP:
+    //Only those who visit the website via http are allowed to enter.
+    $only_http('YOUR_JS_CODE');
+    $only_http('$go_url("403.html")');
+
+  Only HTTPS:
+    //Only those who visit the website via https are allowed to enter.
+    $only_https('YOUR_JS_CODE');
+    $only_https('$go_url("403.html")');
+
+  Only file(LOCAL):
+    //Only those who visit the website via file(LOCAL) are allowed to enter.
+    $only_file('YOUR_JS_CODE');
+    $only_file('$go_url("403.html")');
+
+  Only platform:
+    //You can specify that only the platforms you want can visit your site.
+    $only_platform('YOUR_JS_CODE', 'android');
+    $only_platform('$go_url("403.html")', 'windows');
+
+  Only browser:
+    //You can specify that only the browsers you want can visit your site.
+    $only_browser('YOUR_JS_CODE', 'firefox');
+    $only_browser('$go_url("403.html")', 'chrome');
+
+  Only ip:
+    //You can specify that only the IPs you want can visit your site.
+    $only_ip('YOUR_JS_CODE', '127.0.0.1');
+    $only_ip('$go_url("403.html")', '43.764.64.7');
+
+  Only only_onlion:
+    //You can specify that only users who are online at all can visit your site
+    $only_only_onlion('YOUR_JS_CODE');
+    $only_only_onlion('$go_url("403.html")');
+
+  Only cookie_is_on:
+    //You can specify that only users who have cookies enabled in their browsers can visit your website.
+    $only_cookie_is_on('YOUR_JS_CODE');
+    $only_cookie_is_on('$go_url("403.html")');
+
+  Only java_is_on:
+    //You can specify that only users who have run java enabled in their browsers can visit your website.
+    $only_java_is_on('YOUR_JS_CODE');
+    $only_java_is_on('$go_url("403.html")');
+
+
+
+
+
+BLOCK:
+  Block a IP:
+    //You can block the desired IPs and prevent them from accessing the site.
+    $block_ip('YOUR_JS_CODE', '127.0.0.1');
+    $block_ip('$go_url("403.html")', '0.0.0.0');
+
+  Block a platform:
+    //You can block the desired platforms and prevent them from accessing the site.
+    $block_platform('YOUR_JS_CODE', 'android');
+    $block_platform('$go_url("403.html")', 'linux');
+
+  Block a browser:
+    //You can block the desired browsers and prevent them from accessing the site.
+    $block_browser('YOUR_JS_CODE', 'firefox');
+    $block_browser('$go_url("403.html")', 'anonymous');
+
+
+```
+
+
+
+
 # Encodeing And DEcodeing With Roker.js
 ```
 MD5:
@@ -39,6 +181,31 @@ base64++:
   $decode_base64('text encoded', key=5)  //Decodeing With BASE64 (Your Can Encodeing Text With A KEY And Decodeing With It KEY)
   $crack_key_base64('text encoded')  //Cracking And Hacking Key A Encode Text !
   $compile_base64('js code encode with base64', key=5)  //Compile Encoded JS Code
+
+
+binary:
+  $encode_binary('text') //Encodeing text to binary
+  $decode_binary('encoded text')
+
+
+AES:
+  $encode_AES('text') //Encodeing text to binary
+  $decode_AES('encoded text')
+
+
+Serpent:
+  $encode_Serpent('text') //Encodeing text to binary
+  $decode_Serpent('encoded text')
+
+
+Twofish:
+  $encode_Twofish('text') //Encodeing text to binary
+  $decode_Twofish('encoded text')
+
+
+Skipjack:
+  $encode_Skipjack('text') //Encodeing text to binary
+  $decode_Skipjack('encoded text')
 
 
 ```
@@ -75,33 +242,17 @@ $is_new_user() //false
 
 
 
-
-# $anti_copy() (The ability to copy, right-click, restricts access to some information!)
+# Datas
 ```
-$anti_copy()  //ok
-```
+Data conversion:
+  $int(data)
+  $str(data)
+  $float(data)
 
 
-
-# $anti_injectio(data)  (It cleans the information and neutralizes malicious codes and prevents code injection and hacking of your site!)
-```
-// Your Site Hacked!!!!!! :(
-var text=" <script>alert('Code Injection <XSS>')</script> ";
-document.write(text)
-
-
-// Your site is smiling! :)
-var text=" <script>alert('Code Injection <XSS>')</script> ";
-document.write($anti_injection(text));
-```
-
-
-
-# Data conversion
-```
-$int(data)
-$str(data)
-$float(data)
+Text management:
+  $lower('HEEllo') //Output: heello
+  $upper('he') //Output: HE
 ```
 
 
@@ -141,6 +292,100 @@ $open_url(url)  //Open URL In New TB
 $open_url_window(url, toolbar='yes', width='600', height='500', directories='yes', menubar='yes', scrollbars='yes') //OPen URl In New Windows
 ```
 
+# Create Telegram Robots
+```
+Send Telegram Message To A ChatID:
+  $telegram_sendMessage(botToken, chatId, message)
+  //OR
+  $telegram_sendMessage_post(botToken, userId, text)
+
+
+Send Document To A ChatID:
+  $telegram_sendDocument(botToken, chatId, path_file)
+
+Get Info A User With UserID:
+  $telegram_getUserInfo(botToken,userId)
+
+
+========** Telegram Robot Compiler **========
+  $telegram_compile(botToken, messageList, run=false, log=true);
+
+
+EXM:
+const botToken = 'YOUR_TELEGRAM_BOT_TOKEN';
+const messageList =[
+  {
+    text: '/start',
+    code: "$telegram_sendMessage('[//TOKEN//]', '[//USERID//]', 'hello [//TEXT//] Welcom!' "
+  }
+]
+
+async function mn_app(){
+  await $telegram_compile(botToken, messageList, run=true, log=true);
+}
+setInterval(function mn_app, 1000);
+
+==========================================
+
+```
+
+
+
+
+# random
+```
+Create Random Word:
+  $random_word(letters, number);
+  Exam:
+    $random_word('abcdefjhigklmnopqrstuvwxyz0123456789',8);
+
+
+Create Random Number
+  $random_number(min, max);
+  Exam:
+    $random_number(5, 801) //Output: 56
+```
+
+
+
+# figlet
+```
+$figlet_base(inputText);
+
+Exam:
+  $figlet_base('Roker Lib');
+// Output
+" _____     ____    _   __  ______   _____            _        _____   ______   
+|  __ \\   / __ \\  | | / / |  ____| |  __ \\       | |      |_   _| |  ____|  
+| |__) > | |  | | | |/ /  | |__    | |__) >         | |        | |   | |__     
+|  _  <  | |  | | |   <   |  __|   |  _  <          | |       _| |_  |___ \\    
+| |_) > | |__| | | |\\ \\  | |____  | |_) >         | |____  |_____|  ____/ /   
+|____/   \\____/  |_| \\_\\ |______| |____/          |______|         |_____/    
+
+```
+
+
+# UI
+```
+$UI_Create(code,type='p')
+
+
+//Your Can Create UI Elements With Down Code
+$UI_Create(code)
+
+Exam:
+  $UI_Create('<script>alert("Is $UI_Create !");</script>'); //run js
+  $UI_Create('<h1>Is $UI_Create !</h1>'); //run html
+  $UI_Create('<style>h1{color:green}</style>'); //run css
+```
+
+
+
+# take picture camer
+```
+$take_picture_camera()
+```
+
 
 # Boxs
 ```
@@ -155,8 +400,20 @@ $ask_box(header='title message' ,message='dft message')  //Input Message
 Send Request Post:
   $request_post(url,data=null)
 
-Send Requests Get:
+Get Requests:
   $request_get(url, callback)
+
+Get Requests Plus:
+  $request_get_plus(url)
+
+Send Packet For Openning Url:
+  $request_get_openurl(url)
+
+
+
+Send Packet:
+  $send_packet_to(path, data_value, data_id, data_name, submit_id)
+
 ```
 
 
