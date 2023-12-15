@@ -316,7 +316,7 @@ const botToken = 'YOUR_TELEGRAM_BOT_TOKEN';
 const messageList =[
   {
     text: '/start',
-    code: "$telegram_sendMessage('[//TOKEN//]', '[//USERID//]', 'hello [//TEXT//] Welcom!' "
+    code: "$telegram_sendMessage('[//TOKEN//]', '[//USERID//]', 'hello [//TEXT//] Welcom!')"
   }
 ]
 
