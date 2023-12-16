@@ -48,7 +48,11 @@ $import_style('PATH_OR_URL_YOUR_STYLE');
 ANTI functions:
   Anti Robots:
     //roker uses various methods such as captcha, browser check, connection and IP check, platform, etc. to identify and block them.
-    $is_robot();
+    $anti_robot();
+
+  User Is Robot?
+    //look into it. It returns true if the user was a robot, and false if the user was not a robot.
+    $is_robot(); //false OR true
 
   Anti Click From Site:
     //It prevents the user from right clicking on the site.
