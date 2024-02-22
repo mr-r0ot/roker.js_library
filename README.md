@@ -157,6 +157,10 @@ BLOCK:
 
 # Encodeing And DEcodeing With Roker.js
 ```
+Encoding JS Code:
+  $encode_JScode(text,power=2,end='base16')// (text) is your js code; power is your power encoding 2 is good; end is end encoding [base64, base32, base16, binary]
+
+
 MD5:
   CryptoJS.MD5('text')  //Encodeing With MD5 Hash
 
