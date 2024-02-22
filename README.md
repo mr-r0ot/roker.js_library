@@ -36,6 +36,7 @@ $run_python('exec(input("Enter Python Code: ))')
 ```
 $import_script('PATH_OR_URL_YOUR_SCRIPT');
 $import_style('PATH_OR_URL_YOUR_STYLE');
+$import_html('PATH_OR_URL_HTML_OR_FILE');
 ```
 
 
