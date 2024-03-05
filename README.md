@@ -154,6 +154,18 @@ BLOCK:
 
 
 
+# Disable
+```
+$disable_ctrlKey();
+$disable_altKey();
+$disable_Keyboard();
+$disable_shiftKey();
+$disable_type();
+$disable_bubbles();
+$disable_Key(key)
+```
+
+
 
 # Encodeing And DEcodeing With Roker.js
 ```
